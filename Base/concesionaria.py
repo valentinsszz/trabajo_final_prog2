@@ -45,3 +45,8 @@ class Concesionaria:
 
     def obtener_vehiculos(self):
         return self.__vehiculos
+
+    def __eq__(self, otro):
+        if not isinstance(otro, Concesionaria):
+            return False
+        return self.obtener_numero_id() == otro.obtener_numero_id()

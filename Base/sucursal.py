@@ -32,3 +32,8 @@ class Sucursal:              #CUALQUIER COSA AGREGAMOS LOS TIPOS DE DATOS Y TAL 
 
     def obtenerVentas(self):
         return self.__ventas
+
+    def __eq__(self, otro):
+        if not isinstance(otro, Sucursal):
+            return False
+        return self.obtenerNumeroId() == otro.obtenerNumeroId()
