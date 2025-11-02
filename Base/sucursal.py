@@ -1,31 +1,34 @@
-class Sucursal:
-    def __init__(self, numeroId, direccion):
-        self.numeroId = numeroId
-        self.direccion = direccion
-        self.venta = []
+class Sucursal:              #CUALQUIER COSA AGREGAMOS LOS TIPOS DE DATOS Y TAL VEZ HAYA Q INMPORTAR
 
-    #comandos
+    def _init_(self, numeroId, direccion):
+        self.__numeroId = numeroId
+        self.__direccion = direccion
+        self.__ventas = []  # lista vacía de objetos Venta para guardar las ventas
+
+    # Comandos
     def establecerNumeroId(self, numeroId):
-        self.numeroId = numeroId
-    
+        self.__numeroId = numeroId
+
     def establecerDireccion(self, direccion):
-        self.direccion = direccion
+        self.__direccion = direccion
 
     def agregarVenta(self, venta):
-        self.venta.append(venta)
+        self.__ventas.append(venta)   #agrega una venta, a la lista de Ventas
 
     def removerVenta(self, venta):
-        self.venta.remove(venta)
-    
-    #Consultas
-    def obtenerNumeroId(self):
-        return self.numeroId
-    
-    def obtenerDireccion(self):
-        return self.direccion
-    
-    def obtenerVentas(self):
-        return self.venta
-        
+        if venta in self.__ventas:     #Elimina una venta de la lista solo si esta presente y evita error si no existe
+            self.__ventas.remove(venta)
 
-    
+    #  Consultas
+    def obtenerNumeroId(self):
+        return self.__numeroId
+
+    def obtenerDireccion(self):
+        return self.__direccion
+
+    def obtenerVentas(self):
+        return self.__ventas
+
+
+    def obtenerVentas(self):
+        return self.__ventas
