@@ -36,4 +36,8 @@ class Cliente:                 #lo mismo, nose si hacia falta poner los tipos de
 
     def obtenerEmail(self):
         return self.__email
-
+    
+    def __eq__(self, otro):
+        if not isinstance(otro, Cliente):
+            return False
+        return self.obtenerNumeroId == otro.obtenerNumeroId()

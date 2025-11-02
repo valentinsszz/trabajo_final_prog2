@@ -54,3 +54,8 @@ class Vehiculo(abc.ABC):
     @abc.abstractmethod
     def __str__(self):
         pass
+
+    def __eq__(self, otro):
+        if not isinstance(otro, Vehiculo):
+            return False
+        return self.obtener_numero_id() == otro.obtener_numero_id()

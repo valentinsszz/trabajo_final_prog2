@@ -38,5 +38,10 @@ class Venta:
 
        def obtenerMonto(self):
         return self.__monto
+       
+       def __eq__(self, otro):
+         if not isinstance(otro, Venta):
+           return False
+         return self.obtenerNumeroId() == otro.obtenerNumeroId()
 
     
