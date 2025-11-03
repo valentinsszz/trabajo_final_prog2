@@ -32,3 +32,13 @@ class Sucursal:              #CUALQUIER COSA AGREGAMOS LOS TIPOS DE DATOS Y TAL 
         if not isinstance(otro, Sucursal):
             return False
         return self.obtenerNumeroId() == otro.obtenerNumeroId()
+    
+    def __str__(self):
+        texto = f'Sucursal [ID: {self.__numeroId}] - Direccion: {self.__direccion}\n'
+        if not self.obtenerVentas():
+            texto += " Sin ventas registradas \n"
+        else:
+            texto += " Ventas \n"
+            for i in self.obtenerVentas():
+                texto += "    " + str(i) + "\n"
+        return texto

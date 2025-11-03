@@ -50,3 +50,29 @@ class Concesionaria:
         if not isinstance(otro, Concesionaria):
             return False
         return self.obtener_numero_id() == otro.obtener_numero_id()
+    
+
+    def __str__(self):
+        texto = f"Concesionaria [ID: {self.__numero_id}, Nombre: {self.__nombre}]\n"
+        texto += "\nClientes:\n"
+
+        if not self.obtener_clientes():
+            texto += "No se encontraron clientes.\n"
+        else: 
+            for c in self.obtener_clientes():
+                texto += "    " + str(c) + "\n"
+        
+        if not self.obtener_sucursales():
+            texto += "No se encontraron sucursales.\n"
+        else: 
+            for s in self.obtener_sucursales():
+                texto += "    " + str(s) + "\n"
+
+        if not self.obtener_vehiculos():
+            texto += "No se encontraron vehículos.\n"
+        else: 
+            for v in self.obtener_vehiculos():
+                texto += "    " + str(v) + "\n"
+        
+        return texto
+        
