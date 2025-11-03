@@ -1,6 +1,5 @@
 class Sucursal:              #CUALQUIER COSA AGREGAMOS LOS TIPOS DE DATOS Y TAL VEZ HAYA Q INMPORTAR
-
-    def _init_(self, numeroId, direccion):
+    def __init__(self, numeroId, direccion):
         self.__numeroId = numeroId
         self.__direccion = direccion
         self.__ventas = []  # lista vacía de objetos Venta para guardar las ventas
@@ -25,10 +24,6 @@ class Sucursal:              #CUALQUIER COSA AGREGAMOS LOS TIPOS DE DATOS Y TAL 
 
     def obtenerDireccion(self):
         return self.__direccion
-
-    def obtenerVentas(self):
-        return self.__ventas
-
 
     def obtenerVentas(self):
         return self.__ventas
