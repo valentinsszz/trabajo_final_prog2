@@ -86,7 +86,7 @@ class ServicioConcesionarias:
                     ven.get("vehiculo_id"),
                     ven.get("monto"),
                 )
-                sucursal_registro.agregar_venta(venta_registro)
+                sucursal_registro.agregarVenta(venta_registro)
 
             conc.agregar_sucursal(sucursal_registro)
 
