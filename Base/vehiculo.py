@@ -54,7 +54,7 @@ class Vehiculo(abc.ABC):
     @abc.abstractmethod
     def __str__(self):
         pass
-
+    #EJERCICIO 5:
     def __eq__(self, otro):
         if not isinstance(otro, Vehiculo):
             return False

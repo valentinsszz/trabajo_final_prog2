@@ -1,4 +1,5 @@
-class Sucursal:              #CUALQUIER COSA AGREGAMOS LOS TIPOS DE DATOS Y TAL VEZ HAYA Q INMPORTAR
+#EJERCICIO 1:
+class Sucursal:              
     def __init__(self, numeroId, direccion):
         self.__numeroId = numeroId
         self.__direccion = direccion

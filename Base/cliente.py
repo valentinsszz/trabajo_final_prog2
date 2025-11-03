@@ -1,4 +1,5 @@
-class Cliente:                 #lo mismo, nose si hacia falta poner los tipos de datoss
+#EJERCICIO 2:
+class Cliente:                 
     
     # Constructor
     
@@ -36,12 +37,12 @@ class Cliente:                 #lo mismo, nose si hacia falta poner los tipos de
 
     def obtenerEmail(self):
         return self.__email
-    
+    #EJERCICIO 5:
     def __eq__(self, otro):
         if not isinstance(otro, Cliente):
             return False
         return self.obtenerNumeroId == otro.obtenerNumeroId()
     
     def __str__(self):
-        # Devuelve una cadena legible con los datos del cliente es mas legible que usar return "Cliente: " + self.__nombres + " " + self.__apellidos + " - ID: " + str(self.__numeroId) + " - Email: " + self.__email
+        # Devuelve una cadena legible
         return f"Cliente: {self.__nombres} {self.__apellidos} - ID: {self.__numeroId} - Email: {self.__email}"

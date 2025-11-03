@@ -1,3 +1,4 @@
+#EJERCICIO 4:
 class Venta:
     # Constructor
        def __init__(self, numeroId, fecha, clienteId, vehiculoId, monto):
@@ -38,7 +39,7 @@ class Venta:
 
        def obtenerMonto(self):
         return self.__monto
-       
+      #EJERCICIO 5: 
        def __eq__(self, otro):
          if not isinstance(otro, Venta):
            return False

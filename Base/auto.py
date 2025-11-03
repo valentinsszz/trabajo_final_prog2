@@ -1,6 +1,6 @@
 import vehiculo
 
-
+#EJERCICIO 3:
 class Auto(vehiculo.Vehiculo):
 
     def __init__(self, numero_id, marca, modelo, anio,
