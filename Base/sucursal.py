@@ -28,7 +28,7 @@ class Sucursal:
 
     def obtenerVentas(self):
         return self.__ventas
-
+    #EJERCICIO 5
     def __eq__(self, otro):
         if not isinstance(otro, Sucursal):
             return False
