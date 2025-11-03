@@ -44,4 +44,5 @@ class Venta:
            return False
          return self.obtenerNumeroId() == otro.obtenerNumeroId()
 
-    
+       def __str__(self):
+           return f"Venta {self.__numeroId} - Fecha: {self.__fecha} - Cliente ID: {self.__clienteId} - Vehículo ID: {self.__vehiculoId} - Monto: ${self.__monto}"
